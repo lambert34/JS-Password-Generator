@@ -36,10 +36,10 @@ generateBtn.addEventListener('click', (e) => {
 });
 
 function generatePassword() {
-    const numberChars = "";
-    const upperChars = "";
-    const lowerChars = "";
-    const symbolChars = "";
+    const numberChars = "0123456789";
+    const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+    const symbolChars = "!#$%&'()*+,-./:;<=^_`{|}~";
 }
 
 mainEl.appendChild(passwordEl);
