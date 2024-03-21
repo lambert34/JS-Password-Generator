@@ -16,7 +16,8 @@ passwordEl.setAttribute("placeholder", "Сгенерировать пароль"
 passwordEl.addEventListener("keypress", (e) => {
     e.preventDefault();
 })
-passwordEladdEventListener("focus", (e) => {
+
+passwordEl.addEventListener("focus", (e) => {
 
 });
 
@@ -24,7 +25,16 @@ const copyBtn = document.createElement('button');
 copyBtn.classList.add("password-button");
 copyBtn.innerText = "Скопировать";
 copyBtn.addEventListener('click', (e) => {
-    
+
+})
+
+const generateBtn = document.createElement('button');
+generateBtn.classList.add('password-button');
+generateBtn.innerText = "Сгенерировать";
+generateBtn.addEventListener('click', (e) => {
+    // вызов функции генерации пароля
 })
 
 mainEl.appendChild(passwordEl);
+mainEl.appendChild(copyBtn);
+mainEl.appendChild(generateBtn);
