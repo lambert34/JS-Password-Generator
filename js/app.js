@@ -35,11 +35,12 @@ generateBtn.addEventListener('click', (e) => {
     // вызов функции генерации пароля
 });
 
-function generatePassword() {
+function generatePassword(passwordLength) {
     const numberChars = "0123456789";
     const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowerChars = "abcdefghijklmnopqrstuvwxyz";
     const symbolChars = "!#$%&'()*+,-./:;<=^_`{|}~";
+    const allChars = numberChars + upperChars + lowerChars + symbolChars;
 }
 
 mainEl.appendChild(passwordEl);
