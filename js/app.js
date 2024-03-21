@@ -25,11 +25,13 @@ const copyBtn = document.createElement('button');
 copyBtn.classList.add("password-button");
 copyBtn.innerText = "Скопировать";
 copyBtn.addEventListener('click', (e) => {
+    // скопировать в буфер
     passwordEl.select();
     passwordEl.setSelectionRange(0, 99999);
 
     navigator.clipboard.writeText(passwordEl.value);
 });
+
 
 const generateBtn = document.createElement('button');
 generateBtn.classList.add('password-button');
