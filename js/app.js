@@ -10,7 +10,8 @@
 // создать функцию генерации пароля
 
 const mainEl = document.querySelector(".main");
-const passwordEl = document.createElement(".input");
+const passwordEl = document.createElement("input");
 passwordEl.classList.add(".password");
 passwordEl.setAttribute("placeholder", "Сгенерировать пароль");
 
+mainEl.appendChild(passwordEl);
