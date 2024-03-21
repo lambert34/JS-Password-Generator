@@ -41,6 +41,15 @@ function generatePassword(passwordLength) {
     const lowerChars = "abcdefghijklmnopqrstuvwxyz";
     const symbolChars = "!#$%&'()*+,-./:;<=^_`{|}~";
     const allChars = numberChars + upperChars + lowerChars + symbolChars;
+
+    let randomString = "";
+
+    for (let i = 0; i < passwordLength; i++) {
+        let randomNumber = Mach.floor(Mach.random() * allChars.length);
+        randomString += allChars[randomNumber];
+    }
+
+    return randomString;
 }
 
 mainEl.appendChild(passwordEl);
