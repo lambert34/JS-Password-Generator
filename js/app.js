@@ -11,14 +11,14 @@
 
 const mainEl = document.querySelector(".main");
 const passwordEl = document.createElement("input");
-passwordEl.classList.add(".password");
+passwordEl.classList.add("password");
 passwordEl.setAttribute("placeholder", "Сгенерировать пароль");
 passwordEl.addEventListener("keypress", (e) => {
     e.preventDefault();
 });
 
 passwordEl.addEventListener("focus", (e) => {
-
+    navigator.clipboard.writeText(passwordEl.value);
 });
 
 const copyBtn = document.createElement('button');
