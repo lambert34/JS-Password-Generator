@@ -33,6 +33,9 @@ generateBtn.classList.add('password-button');
 generateBtn.innerText = "Сгенерировать";
 generateBtn.addEventListener('click', (e) => {
     // вызов функции генерации пароля
+    let password = generatePassword(12);
+    console.log(password);
+    passwordEl.value = password;
 });
 
 function generatePassword(passwordLength) {
@@ -45,7 +48,7 @@ function generatePassword(passwordLength) {
     let randomString = "";
 
     for (let i = 0; i < passwordLength; i++) {
-        let randomNumber = Mach.floor(Mach.random() * allChars.length);
+        let randomNumber = Math.floor(Math.random() * allChars.length);
         randomString += allChars[randomNumber];
     }
 
